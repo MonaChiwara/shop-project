@@ -13,6 +13,9 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.get('/icecream', (req,res) => res.render('Index', {froyo: icecream}))
 
 // New
+app.get('/icecream/new', (req,res) => {
+    res.render('New')
+})
 
 // Delete
 
