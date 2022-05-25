@@ -5,7 +5,7 @@ class New extends React.Component{
         return(
             <div>
             <h1>New Page</h1>
-            <form action="/icecream">
+            <form action="/icecream" method="POST">
                 <label htmlFor="name">Name</label>
                 <input type="text" id="name" name="name" />
                 <label htmlFor="name">Color</label>
