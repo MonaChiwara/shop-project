@@ -1,5 +1,7 @@
 require('dotenv').config()
 const express = require ('express')
+const { redirect } = require('express/lib/response')
+const method = require('method-override')
 const mongoose = require('mongoose')
 const app = express()
 const PORT = 3000
@@ -19,7 +21,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 // ===== Middleware =====
-// app.use(method('_method'))
+app.use(method('_method'))
 app.use(express.urlencoded({extended:false}));
 app.use((req, res, next) => {
     console.log('I run for all the routes.')
@@ -41,6 +43,15 @@ app.get('/icecream/new', (req,res) => {
 })
 
 // Delete
+app.delete('/icecream/:id', (req,res) => {
+    Icecream.findByIdAndDelete(req.params.id, (err) => {
+        if (!err){
+            res.status(200).redirect('/icecream')
+        } else{
+            res.status(400).json(err)
+        }
+    })
+})
 
 // Update
 
