@@ -20,7 +20,7 @@ class Index extends React.Component {
                                         <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
                                             <input type="submit" value= "Delete"/>
                                         </form>
-                                        <button><a href={`/fruits/${icecream._id}/edit`}>{`Edit ${icecream.name}`}</a></button>
+                                        <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit ${icecream.name}`}</a></button>
                                     </li>
                                 )
                             })

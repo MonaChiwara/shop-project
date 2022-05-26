@@ -54,26 +54,40 @@ app.delete('/icecream/:id', (req,res) => {
 })
 
 // Update
+app.put('/icecream/:id', (req,res) => { 
+    req.body.readyToEat = req.body.readyToEat === 'on' ? true : false;
+    Icecream.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedIcecream) => {
+        if (!err) {
+            res.status(200).redirect('/icecream')
+        } else{
+            res.status(400).json(err)
+        }
+    })
+})
 
 // Create
 app.post('/icecream', (req,res) => {
     req.body.readyToEat = req.body.readyToEat === 'on' ? true : false;
-    // icecream.push(req.body)
-    // console.log('req.body', req.body)
-
     Icecream.create(req.body, (err,createIcecream) => {
-        // res.send(createIcecream)
         res.redirect('/icecream')
 
     })
-   
-  
 })
 console.dir(Icecream)
 
 
 
 // Edit
+app.get('/icecream/:id/edit', (req,res) => {
+    Icecream.findById(req.params.id, (err, foundIcecream) =>{
+        if (!err){
+            res.render('Edit', {icecream: foundIcecream})
+        } else {
+            res.status(400).json(err)
+        }
+    })
+})
+
 
 // Show
 app.get('/icecream/:id', (req, res) => {

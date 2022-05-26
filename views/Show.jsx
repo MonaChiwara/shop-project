@@ -8,7 +8,7 @@ class Show extends React.Component {
         return (
             <DefaultLayout title= 'Show'>
                 <div>
-                    <p>The {icecream.name}'s// color is {icecream.color}. </p>
+                    <p>The {icecream.name}'s color is {icecream.color}. </p>
                     <p>
                         {
                             icecream.readyToEat
@@ -22,6 +22,7 @@ class Show extends React.Component {
                     <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
                         <input type="submit" value= "DELETE"/>
                     </form>
+                    <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit ${icecream.name}`}</a></button>
                 </div>
             </DefaultLayout>
         )
@@ -29,3 +30,4 @@ class Show extends React.Component {
 }
 
 module.exports = Show
+
