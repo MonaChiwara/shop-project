@@ -1,19 +1,13 @@
-const icecream = [
-    {
-        name:'apple',
-        color: 'red',
-        readyToEat: true
-    },
-    {
-        name:'pear',
-        color: 'green',
-        readyToEat: false
-    },
-    {
-        name:'banana',
-        color: 'yellow',
-        readyToEat: true
-    }
-];
 
-module.exports = icecream
+const mongoose = require('mongoose');
+
+const icecreamSchema = new mongoose.Schema({
+    name:  { type: String, required: true },
+    color:  { type: String, required: true },
+    readyToEat: Boolean
+});
+
+const Icecream = mongoose.model('Icecream', icecreamSchema);
+
+module.exports = Icecream;
+

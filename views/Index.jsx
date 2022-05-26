@@ -2,30 +2,30 @@ const React = require('react')
 
 class Index extends React.Component {
     render() {
-        // ask question
-        const { froyo } = this.props
+        const { icecream } = this.props
         return (
             <div>
-                <h1>Index Page</h1>
                 <nav>
-                    <a href="/icecream/new">Create New Icecream</a>
+                <a href="/icecream/new">Create New Icecream</a>
 
-                    <ul>
-                        {
-                            froyo.map((icecream, i) => {
-                                return (
-                                    <li>
-                                        <p>The <a href={`/icecream/${i}`}>{icecream.name}'s</a> color is {icecream.color}</p>
-                                        <p>{icecream.readyToEat ? 'READY' : 'NOT READY'}</p>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
                 </nav>
+                <h1>Fruits Index Page</h1>
+                <ul>
+                    {
+                        icecream.map(icecream => {
+                            return (
+                                <li key={icecream._id}>
+                                    <p>The <a href={`/icecream/${icecream._id}`}>{icecream.name}'s</a> color is {icecream.color}.</p>
+                                    <p>{icecream.readyToEat ? 'READY' : 'NOT READY'}</p>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
             </div>
         )
     }
 }
 
 module.exports = Index
+
