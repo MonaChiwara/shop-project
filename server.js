@@ -23,6 +23,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 // ===== Middleware =====
 app.use(method('_method'))
 app.use(express.urlencoded({extended:false}));
+app.use(express.static('public'))
 app.use((req, res, next) => {
     console.log('I run for all the routes.')
     next()
@@ -55,7 +56,6 @@ app.delete('/icecream/:id', (req,res) => {
 
 // Update
 app.put('/icecream/:id', (req,res) => { 
-    req.body.readyToEat = req.body.readyToEat === 'on' ? true : false;
     Icecream.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedIcecream) => {
         if (!err) {
             res.status(200).redirect('/icecream')
@@ -67,7 +67,8 @@ app.put('/icecream/:id', (req,res) => {
 
 // Create
 app.post('/icecream', (req,res) => {
-    req.body.readyToEat = req.body.readyToEat === 'on' ? true : false;
+    console.log('BEFORE', req.body.name)
+    console.log('req.body:', req.body)
     Icecream.create(req.body, (err,createIcecream) => {
         res.redirect('/icecream')
 

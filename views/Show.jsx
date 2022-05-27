@@ -6,23 +6,17 @@ class Show extends React.Component {
         console.log(this.props.icecream)
         const icecream = this.props.icecream
         return (
-            <DefaultLayout title= 'Show'>
+            <DefaultLayout title='Show'>
                 <div>
-                    <p>The {icecream.name}'s color is {icecream.color}. </p>
-                    <p>
-                        {
-                            icecream.readyToEat
-                                ?
-                                "It's ready to eat"
-                                :
-                                "It's not ready to eat"
-                        }
-                    </p>
-                    <button><a href={'/icecream'}>Back</a></button>
+                    <p> The marvelous <a href={`/icecream/${icecream._id}`}>{icecream.name} </a> ice cream created with {icecream.base} and {icecream.ingredients}</p>
+
+                    <button><a href={'/icecream'}>Home</a></button>
+                    <button><a href={`/icecream/${icecream._id}/edit`}></a>Personalize</button>
                     <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
-                        <input type="submit" value= "DELETE"/>
+                        <input type="submit" value="DELETE" />
                     </form>
-                    <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit ${icecream.name}`}</a></button>
+                    
+                    {/* <button><a href={'/icecream'}>Add to Cart</a></button> */}
                 </div>
             </DefaultLayout>
         )

@@ -11,11 +11,12 @@ module.exports = class Edit extends React.Component {
                 <form action={`/icecream/${icecream._id}?_method=PUT`} method="POST">
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" name="name"/>
-                    <label htmlFor="color">Color:</label>
-                    <input type="text" id="color" name="color"/>
-                    <label htmlFor="readyToEat">Ready to eat:</label>
-                    <input type="checkbox" id="readyToEat" name="readyToEat" defaultChecked={icecream.readyToEat}/>
+                    <label htmlFor="base">Ice cream base:</label>
+                    <input type="text" id="color" name="base"/>
+                    <label htmlFor="ingredients">Ingredients</label>
+                    <input type="text" id="readyToEat" name="ingredients"/>
                     <input type="submit" value="Edit Icecream"/>
+                    {/* <button><a href={`/icecream/${icecream._id}`}>{`Add to cart`}</a></button> */}
                 </form>
             </DefaultLayout>
         )
