@@ -86,10 +86,13 @@ class Index extends React.Component {
                                     <li key={icecream._id}>
                                         <p> The marvelous <a href={`/icecream/${icecream._id}`}>{icecream.name} </a> ice cream created with {icecream.base} and {icecream.ingredients}</p>
                                         <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
+                                        <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit`}</a></button>
+                                        <br /> <br />
+                                        <button><a href={'/icecream'}>Add To Cart</a></button>
+                                        <br /> <br />
                                             <input type="submit" value="Delete" />
                                         </form>
-                                        <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit ${icecream.name}`}</a></button>
-                                        <button><a href={`/icecream/${icecream._id}`}>{`Add to cart`}</a></button>
+                                        
                                     </li>
                                 )
                             })

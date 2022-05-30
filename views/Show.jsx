@@ -11,12 +11,15 @@ class Show extends React.Component {
                     <p> The marvelous <a href={`/icecream/${icecream._id}`}>{icecream.name} </a> ice cream created with {icecream.base} and {icecream.ingredients}</p>
 
                     <button><a href={'/icecream'}>Home</a></button>
+                    <br /> <br />
                     <button><a href={`/icecream/${icecream._id}/edit`}></a>Personalize</button>
+                    <br /> <br />
                     <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
-                        <input type="submit" value="DELETE" />
+                    <br /> <br />
+                    <input type="submit" value="DELETE" />
                     </form>
                     
-                    {/* <button><a href={'/icecream'}>Add to Cart</a></button> */}
+                    <button><a href={'/icecream'}>Add to Cart</a></button>
                 </div>
             </DefaultLayout>
         )
