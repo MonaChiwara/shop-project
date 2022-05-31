@@ -15,15 +15,15 @@ module.exports = class New extends React.Component {
                             <label htmlFor="name">Name:</label>
                             <input type="text" id="name" name="name" />
                             <br /> <br />
-                            <label htmlFor="color">Ice Cream Base:</label>
+                            <label htmlFor="color">Ice Cream Flavor:</label>
                             <input type="text" id="color" name="base" />
                             <br /> <br />
-                            <label htmlFor="ingredients">Ingredients:</label>
+                            <label htmlFor="ingredients">Toppings:</label>
                             <input type="text" id="ingredients" name="ingredients" />
                             <br /> <br />
                             <label htmlFor="price">Price:</label>
                             <input type="number" id="price" name="price" />
-                            <label htmlFor="image">image</label>
+                            <label htmlFor="image">Picture:</label>
                             <input type="url" id="image" name="image" />
                             {/* <label htmlFor="inventory">inventory</label>
                             <input type="number" id="inventory" name="inventory" /> */}
@@ -91,7 +91,7 @@ module.exports = class New extends React.Component {
                         </ul>
                     </div>
 
-                    <div>
+                    <div id='nuts'>
                         <h3>Nuts</h3>
                         <ul>
                             <li>Peanuts</li>
