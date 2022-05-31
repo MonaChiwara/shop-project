@@ -100,8 +100,8 @@ module.exports = class New extends React.Component {
                             <br /> <br />
                             <label htmlFor="price">Price:</label>
                             <input type="number" id="price" name="price" />
-                            {/* <label htmlFor="price">Price:</label>
-                            <input type="number" id="price" name="price" /> */}
+                            <label htmlFor="image">hh</label>
+                            <input type="url" id="image" name="image" />
                            
                             <input type="submit" value="Done" />
                         </form>
