@@ -6,7 +6,8 @@ const icecreamSchema = new mongoose.Schema({
     base:  { type: String, required: true },
     ingredients: { type: String, required: true },
     price: { type: Number, required: true },
-    image: { type: String}
+    image: { type: String},
+    // inventory: { type: Number}
 });
 
 const Icecream = mongoose.model('Icecream', icecreamSchema);

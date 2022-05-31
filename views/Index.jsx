@@ -89,7 +89,7 @@ class Index extends React.Component {
                                         <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
                                         <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit`}</a></button>
                                         <br /> <br />
-                                        <button><a href={'/icecream'}>Add To Cart</a></button>
+                                        <button><a href={`/icecream/${icecream._id}/edit`}>{`Add To Cart`}</a></button>
                                         <br /> <br />
                                         <p><img src={icecream.image} alt="" /></p>
                                         <br /> <br />

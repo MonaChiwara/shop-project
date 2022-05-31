@@ -1,80 +1,3 @@
-// const React = require('react')
-// const DefaultLayout = require("./layout/DefaultLayout")
-
-// class New extends React.Component {
-//     render() {
-//         return (
-//             <DefaultLayout title='New'>
-//                 <div>
-//                     <div id='form1'>
-//                     <form action="/icecream" method="POST">
-//                         <label htmlFor="name">Name:</label>
-//                         <input type="text" id="name" name="name"/>
-//                         <label htmlFor="color">Ice Cream Base:</label>
-//                         <input type="text" id="color" name="color"/>
-//                         <label htmlFor="readyToEat">Add Ons</label>
-//                         <input type="text" id="ingredients" name="ingredients"/>
-//                         <input type="submit" value="Create New Flavor" />
-//                         </form>
-//                     </div>
-{/* <div id='form3'>
-                        <h3>Add Ons</h3>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Belgian Chocolate Chips</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Oreos</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Dark Chocolate Chips</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Cotton Candy</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Hot Fudge</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Marshmallows</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Mint</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Caramel Drizzle</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Pecans</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">Peanuts</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                            <input type="checkbox" id="ingradients" name="color" />
-                            <label htmlFor="name">None</label>
-                        </form>
-                        <form action="/icecream" method="POST">
-                        <input type="submit" value="ADD TO CART" />
-                        </form>
-                    </div> */}
-{/* </div>
-            </DefaultLayout>
-        )
-    }
-}
-
-module.exports = New */}
-
 const React = require('react')
 const Icecream = require('../models/Icecream')
 const DefaultLayout = require('./layout/DefaultLayout')
@@ -100,8 +23,10 @@ module.exports = class New extends React.Component {
                             <br /> <br />
                             <label htmlFor="price">Price:</label>
                             <input type="number" id="price" name="price" />
-                            <label htmlFor="image">hh</label>
+                            <label htmlFor="image">image</label>
                             <input type="url" id="image" name="image" />
+                            {/* <label htmlFor="inventory">inventory</label>
+                            <input type="number" id="inventory" name="inventory" /> */}
                            
                             <input type="submit" value="Done" />
                         </form>

@@ -97,4 +97,16 @@ app.get('/icecream/:id', (req, res) => {
     
 })
 
+// // Updates Show Page with product's inventory reducing by 1 functionality
+// app.put('/icecream/:id/buy', async (req, res) => {
+//     const foundIcecream = await Icecream.findById(req.params.id)
+//     // console.log(foundIcecream.inventory)
+//     Product.findByIdAndUpdate(req.params.id, {
+//         inventory: foundIcecream.inventory - 1
+//     }, { new: true }, (err, updatedProduct) => {
+
+//         res.redirect(`/icecream/${req.params.id}`)
+//     })
+// })
+
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`))

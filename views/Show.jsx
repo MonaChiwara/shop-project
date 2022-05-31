@@ -9,18 +9,22 @@ class Show extends React.Component {
             <DefaultLayout title='Show'>
                 <div>
                     <p> The marvelous <a href={`/icecream/${icecream._id}`}>{icecream.name} </a> ice cream created with {icecream.base} and {icecream.ingredients}</p>
-                    <p>{icecream.image}</p>
                     <p>{icecream.price}</p>
+                    <p><img src={icecream.image} alt="" /></p>
                     <button><a href={'/icecream'}>Home</a></button>
                     <br /> <br />
-                    <button><a href={`/icecream/${icecream._id}/edit`}></a>Personalize</button>
+                    <button><a href={`/icecream/${icecream._id}/edit`}>{`Edit`}</a>Personalize</button>
                     <br /> <br />
                     <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
                     <br /> <br />
                     <input type="submit" value="DELETE" />
                     </form>
+                   
+                    <form action={`/products/${icecream._id}/buy?_method=PUT`} method="POST">
+                        <input class={icecream.inventory > 0 ? "buyButton" : "noBuyButton"} type="submit" value="ADD TO CART" />
+                    </form>
                     
-                    <button><a href={'/icecream'}>Add to Cart</a></button>
+                    {/* <button><a href={`/icecream/${icecream._id}/cart`}>Add to Cart</a></button> */}
                 </div>
             </DefaultLayout>
         )
