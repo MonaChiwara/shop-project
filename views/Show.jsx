@@ -9,7 +9,8 @@ class Show extends React.Component {
             <DefaultLayout title='Show'>
                 <div>
                     <p> The marvelous <a href={`/icecream/${icecream._id}`}>{icecream.name} </a> ice cream created with {icecream.base} and {icecream.ingredients}</p>
-
+                    <p>{icecream.image}</p>
+                    <p>{icecream.price}</p>
                     <button><a href={'/icecream'}>Home</a></button>
                     <br /> <br />
                     <button><a href={`/icecream/${icecream._id}/edit`}></a>Personalize</button>

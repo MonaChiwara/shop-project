@@ -76,6 +76,7 @@
 module.exports = New */}
 
 const React = require('react')
+const Icecream = require('../models/Icecream')
 const DefaultLayout = require('./layout/DefaultLayout')
 
 module.exports = class New extends React.Component {
@@ -94,9 +95,14 @@ module.exports = class New extends React.Component {
                             <label htmlFor="color">Ice Cream Base:</label>
                             <input type="text" id="color" name="base" />
                             <br /> <br />
-                            <label htmlFor="readyToEat">Ingredients:</label>
-                            <input type="text" id="readyToEat" name="ingredients" />
+                            <label htmlFor="ingredients">Ingredients:</label>
+                            <input type="text" id="ingredients" name="ingredients" />
                             <br /> <br />
+                            <label htmlFor="price">Price:</label>
+                            <input type="number" id="price" name="price" />
+                            {/* <label htmlFor="price">Price:</label>
+                            <input type="number" id="price" name="price" /> */}
+                           
                             <input type="submit" value="Done" />
                         </form>
                     </div>

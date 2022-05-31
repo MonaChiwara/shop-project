@@ -71,7 +71,6 @@ app.post('/icecream', (req,res) => {
     console.log('req.body:', req.body)
     Icecream.create(req.body, (err,createIcecream) => {
         res.redirect('/icecream')
-
     })
 })
 console.dir(Icecream)
