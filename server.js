@@ -97,6 +97,13 @@ app.get('/icecream/:id', (req, res) => {
     
 })
 
+
+// About Us
+app.get('/icecream/about', (req,res) => {
+    // console.log('about us')
+    res.render('About')
+})
+
 // // Updates Show Page with product's inventory reducing by 1 functionality
 // app.put('/icecream/:id/buy', async (req, res) => {
 //     const foundIcecream = await Icecream.findById(req.params.id)

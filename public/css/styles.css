@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+/* div{
+    margin: 30px;
+} */
 
 img {
     height: 350px;
@@ -78,12 +80,13 @@ h3 {
 
 #h1div {
     display: flex;
-    padding: 10px 300px;
+    padding: 10px 30px;
+    height: 120px;
 
 }
 
 #indexHeader {
-    margin: 85px;
+    margin: 35px;
 }
 
 .navbar {
@@ -136,8 +139,13 @@ nav ul {
     transition: 1s ease;
 }
 
+li{
+    text-decoration: none;
+    list-style: none;
+}
 
-li {
+
+#nav1 >li {
     list-style: none;
     text-decoration: none;
     display: inline-block;
@@ -145,10 +153,18 @@ li {
     padding: 5px;
 }
 
+#nav2 > li {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    /* margin-right: 20px; */
+    padding: 10px;
+}
+
 
 #logo {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width:100px;
 }
 
 #indexHeader {
@@ -163,8 +179,14 @@ h2 {
     color: rgb(118, 179, 255);
     font-size: 30px;
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
+    text-decoration: none;
 }
+
+.h2index{
+   text-align: center; 
+}
+
 
 #divnav {
     display: flex;
@@ -214,7 +236,8 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: auto;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+   
 }
 
 button {
@@ -264,4 +287,40 @@ div> #new >button:hover {
     -o-transition: all 0.5s;
     transition: all 0.5s;
     cursor: pointer;
+}
+
+#creatediv{
+text-align: center;
+color: rgb(207, 93, 248);
+text-decoration: underline;
+    
+}
+
+h1{
+color: rgb(207, 93, 248);
+}
+
+#footerdiv {
+    background-color: rgb(51, 154, 250);
+    height: 80px;
+    display: grid;
+    width: 100vw;
+    padding: 20px 30px;
+}
+.leftfooter {
+    color: antiquewhite;
+    grid-column: 1/2;
+
+}
+.rightfooter{
+    color: antiquewhite;
+    grid-column: 4/5
+}
+
+#aboutdiv{
+    margin: 20px;
+}
+
+#new > a{
+    text-decoration: underline;
 }

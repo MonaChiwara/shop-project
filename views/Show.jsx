@@ -19,7 +19,7 @@ class Show extends React.Component {
                     <br />
                     <form action={`/icecream/${icecream._id}?_method=DELETE`} method='POST'>
                         <br />
-                        <input type="submit" value="DELETE" />
+                        <input type="submit" value="DELETE" class='btn delete'  />
                     </form>
 
                     {/* <form action={`/icecream/${icecream._id}/?_method=PUT`} method="POST">

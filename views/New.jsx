@@ -5,11 +5,12 @@ const DefaultLayout = require('./layout/DefaultLayout')
 module.exports = class New extends React.Component {
     render() {
         return (
-            <DefaultLayout title='Your Marvelous Creation'>
+            <DefaultLayout>
                 <div id='newid'>
                     <div>
+                        <h1>Your Marvelous Creation</h1>
                         <div id='paragraph'>
-                            <p>To create your Marvelous Creation Ice Cream, choose a unique name, pick an ice cream base as well as addition ingredients from the list below</p>
+                            <p>To create your Marvelous Creation Ice Cream, choose a unique name, pick an ice cream flavor as well as additional toppings from the list below</p>
                         </div>
                         <form action="/icecream" method="POST">
                             <label htmlFor="name">Name:</label>
@@ -32,7 +33,7 @@ module.exports = class New extends React.Component {
                         </form>
                     </div>
                     <div id='icecream-base'>
-                        <h2>Ice Cream Bases</h2>
+                        <h2>Ice Cream Flavors</h2>
                         <ul>
                             <li>Vanilla</li>
                             <li>Chocolate</li>
@@ -45,7 +46,7 @@ module.exports = class New extends React.Component {
                         </ul>
                     </div>
                     <div>
-                        <h2>Ingredients</h2>
+                        <h2>Toppings</h2>
                     </div>
                     <div id='chocolate'>
                         <h3>Chocalate</h3>

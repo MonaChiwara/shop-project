@@ -12,27 +12,27 @@ module.exports = class Edit extends React.Component {
                         <h1>{icecream.name}</h1>
                         <form action={`/icecream/${icecream._id}?_method=PUT`} method="POST">
                             <label htmlFor="name">Name:</label>
-                            <input type="text" id="name" name="name" />
+                            <input type="text" id="name" name="name" defaultValue={icecream.name} />
                             <br /> <br />
                             <label htmlFor="base">Ice cream Flavor:</label>
-                            <input type="text" id="base" name="base" />
+                            <input type="text" id="base" name="base" defaultValue={icecream.base} />
                             <br /> <br />
                             <label htmlFor="ingredients">Toppings</label>
-                            <input type="text" id="ingredients" name="ingredients" />
+                            <input type="text" id="ingredients" name="ingredients" defaultValue={icecream.ingredients}/>
                             <br /> <br />
                             <label htmlFor="price">Price:</label>
-                            <input type="number" id="price" name="price" />
+                            <input type="number" id="price" name="price" defaultValue={icecream.price}/>
                             <br /> <br />
                             <label htmlFor="image">Picture:</label>
-                            <input type="url" id="image" name="image" />
+                            <input type="url" id="image" name="image" defaultValue={icecream.image}/>
                             <br /> <br />
-                            <input type="submit" value="Edit Icecream" />
+                            <input type="submit" value="Edit Icecream"  />
                             {/* <button><a href={`/icecream/${icecream._id}`}>{`Add to cart`}</a></button> */}
                         </form>
                     
                     </div>
                     <div id='icecream-base'>
-                        <h2>Ice Cream Bases</h2>
+                        <h2>Ice Cream Flavors</h2>
                         <ul>
                             <li>Vanilla</li>
                             <li>Chocolate</li>
@@ -45,7 +45,7 @@ module.exports = class Edit extends React.Component {
                         </ul>
                     </div>
                     <div>
-                        <h2>Ingredients</h2>
+                        <h2>Toppings</h2>
                     </div>
                     <div id='chocolate'>
                         <h3>Chocalate</h3>
